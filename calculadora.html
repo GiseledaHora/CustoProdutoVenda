@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <p> Digite um número:<span id="numeroum"></span></p>
+    <p> Digite o segundo número:<span id="numerodois"></span></p>
+    <p> opção:<span id="opcao"></span></p>
+    <p> resultado:<span id="resultado"></span></p>
+     
+<script>
+ 
+    let numero_um;
+    let numero_dois;
+    let opcao;
+    let resultado;
+
+    opcao = Number(prompt("Digite qual operação você quer fazer: + Adiçao, - Subtração, * Multiplicação,  / Divisão, "));
+    numeroum= Number(prompt("Digite o primeiro número"));
+    numerodois =Number(prompt("Digite o segundo número"));
+     
+    if(opcao = "+"){
+        resultado = numero_um + numero_dois
+    }
+  
+    if(opcao = "-"){
+        resultado = numero_um - numero_dois
+    }
+
+    if(opcao = "*"){
+        resultado = numero_um * numero_dois
+    }
+
+    if(opcao = "/"){
+        resultado = numero_um / numero_dois
+    }
+
+    
+
+    document.getElementById('numero_um').innerHTML = numero_um;
+    document.getElementById('numero_dois').innerHTML = numero_dois;
+    document.getElementById('opcao').innerHTML = opcao;
+    document.getElementById('resultado').innerHTML = resultado;
+
+ </script>
+</body>
+</html>

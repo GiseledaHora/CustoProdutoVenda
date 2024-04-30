@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>notas</title>
+</head>
+<body>
+    <h1>Boletim escolar</h1>
+    <p> Nome: <span id="nomePessoa"></span></p>
+   <p>primeiro_bimestre:<span id="primeirobimestre"></span></p>
+    <p>segundo_bimestre:<span id="segundobimestre"></span></p>
+    <p>terceiro_bimestre:<span id="terceirobimestre"></span></p>
+    <p>quarto_bimestre:<span id="quartobimestre"></span></p>
+    <p>resultado:<span id="resultado"></span></p>
+    
+
+    <script>
+        let nome;
+        let primeiro_bimestre;
+        let segundo_bimestre;
+        let terceiro_bimestre;
+        let quarto_bimestre;
+
+        nome = prompt("Digite seu nome")
+        primeirobimestre = Number (prompt("Digite sua nota do primeiro bimestre"));
+        segundobimestre = Number(prompt("Digite sua nota do segundo bimestre"));
+        terceirobimestre = Number(prompt("Digite sua nota do terceiro bimestre"));
+        quartobimestre = Number(prompt("Digite sua nota do quarto bimestre"));
+
+        resultado = (primeirobimestre + segundobimestre + terceirobimestre + quartobimestre)/4;
+
+        if( resultado >=7){
+            resultado="Você foi aprovado"
+        } else{
+            resultado= "Você foi reprovado"
+        }
+
+
+    document.getElementById('nomePessoa').innerHTML = nome;
+    document.getElementById('primeirobimestre').innerHTML = primeirobimestre;
+    document.getElementById('segundobimestre').innerHTML = segundobimestre;
+    document.getElementById('terceirobimestre').innerHTML = terceirobimestre;
+    document.getElementById('quartobimestre').innerHTML = quartobimestre;
+    document.getElementById('resultado').innerHTML = resultado;
+
+    
+    </script>
+</body>
+</html>

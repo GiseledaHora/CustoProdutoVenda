@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voto</title>
+</head>
+<body>
+     <h1>Voto no Brasil</h1>
+    <p> Nome: <span id="nomePessoa"></span></p>
+    <p> Idade: <span id="idadePessoa"></span></p>
+    <p> meu voto é obrigatorio sim ou não? <span id="meuvoto"></span></p>
+
+     
+<script>
+    let nome;
+    let idade;
+    let meuvoto;
+     
+    //nome = "Gisela"
+    //idade = 14;
+
+    nome = prompt("Digite o seu nome");
+    idade = prompt("Digite sua idade");
+
+    if(idade <= 15){
+        meuvoto= "Seu voto não é permitido";
+    } 
+
+    if(idade >=16 && idade <18){
+        meuvoto= "Seu voto é opcional"
+    }
+
+    if(idade >=18 && idade <=64){
+        meuvoto= "Seu voto é obrigatório"
+    }
+
+    if(idade >= 65){
+        meuvoto= "Seu voto é opcional";
+    } 
+    
+    //console.log(meuvoto);  //- Isso é para mostrar no console do browser
+   
+    document.getElementById('nomePessoa').innerHTML = nome;
+    document.getElementById('idadePessoa').innerHTML = idade;
+    document.getElementById('meuvoto').innerHTML = meuvoto;
+
+
+</script>
+
+</body>
+</html>
